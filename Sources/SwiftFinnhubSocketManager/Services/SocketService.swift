@@ -16,7 +16,6 @@ enum SocketEvent {
     case cancelled
 }
 
-@available(iOS 13.0, *)
 class SocketService {
   
     var task: URLSessionWebSocketTask?

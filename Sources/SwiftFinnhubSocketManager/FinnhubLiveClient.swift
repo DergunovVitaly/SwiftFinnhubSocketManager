@@ -19,14 +19,12 @@ public enum FinnhubLiveSuccess {
     case empty
 }
 
-@available(iOS 13.0, *)
 public class FinnhubLiveClient {
     public static let shared: FinnhubLiveClient = {
         let instance = FinnhubLiveClient()
         return instance
     }()
     
-    @available(iOS 13.0, *)
     fileprivate lazy var socketService: SocketService = {
         SocketService(url: SafeURL.path("\(Constants.BASE_SOCKET_URL)?token=\(Constants.API_KEY)"))
     }()
